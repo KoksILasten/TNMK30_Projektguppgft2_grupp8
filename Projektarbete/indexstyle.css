@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Stardos+Stencil&display=swap");
+
+body,html {
+   height: 100%
+   
+}
+
+*{
+	box-sizing: border-box;
+}
+#bg-img {
+  background-image: url("legobakgrund.jpeg");
+  
+
+  /* Full height */
+  height: 100vw;
+  width: auto;
+  overflow: hidden;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	
+}
+#bg-img .blur{
+    filter: blur(8px);
+    height: 300px;
+    width: 300px;
+    margin-left: 60px;
+    margin-top: 144px;
+	
+}
+.headernavbar {
+  font-family: "Staatliches";
+  background-color: red;
+  overflow: hidden;
+  padding: 1vw;
+  border-bottom: yellow solid 1.5vw;
+}
+.headernavbar a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px; /*scalar inte :/ kanske byt till vw om det ser snyggt ut*/
+  text-decoration: none;
+  font-size: 2vw;
+}
+.headernavbar a:hover {
+  background-color: black;
+  color: white;
+}
+.headernavbar a:active {
+  background-color: gray;
+  color: white;
+}
+#header {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  justify-content: center;
+}
