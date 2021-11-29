@@ -31,30 +31,28 @@ html {
     overflow: hidden;
     padding: 1vw;
     border-bottom: yellow solid 1.5vw;
+    margin-left: -5vw;
 }
 
 .headernavbar a {
-    color: black;
+    color: white;
     text-align: center;
-    padding: 1.4vw 1.6vw;
+    margin: 6vw;
     /*scalar inte :/ kanske byt till vw om det ser snyggt ut*/
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
-.headernavbar a:hover {
-    background-color: black;
-    color: white;
+.headernavbar :hover {
+    color: black;
 }
 
-.headernavbar a:active {
-    background-color: gray;
-    color: white;
+.headernavbar .text:active {
+    color: black;
 }
 
-.headernavbar a.active {
-    background-color: gray;
-    color: white;
+.headernavbar .text:active {
+    color: black;
 }
 
 #header {
@@ -62,6 +60,11 @@ html {
     flex-wrap: nowrap;
     list-style-type: none;
     justify-content: center;
+    align-items: center;
+}
+
+.headernavbar img {
+    transform: rotate(40deg);
 }
 
 .searchbar {
