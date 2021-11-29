@@ -23,6 +23,7 @@
      background-repeat: no-repeat;
      background-size: cover;
      filter: blur(2px);
+     z-index: 1;
  }
  
  .headernavbar {
@@ -72,7 +73,7 @@
      left: 0;
      right: 0;
      margin: auto;
-     margin-top: 12vw;
+     margin-top: 10vw;
  }
  
  form {
@@ -81,7 +82,7 @@
      justify-content: center;
  }
  
- .searchbar button {
+ .searchbar .search {
      margin-left: -1vw;
      width: 4vh;
      height: 8vh;
@@ -123,15 +124,15 @@
  .accordion {
      position: absolute;
      z-index: 7;
-     background-color: #eee;
-     color: #444;
      cursor: pointer;
-     padding: 18px;
-     width: 50%;
+     padding: 1vw;
+     margin-top: 1vw;
+     width: 15vw;
      text-align: left;
      border: none;
      outline: none;
      transition: 0.4s;
+     border-radius: 3px;
  }
  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
  
@@ -142,8 +143,35 @@
  /* Style the accordion panel. Note: hidden by default */
  
  .panel {
+     position: absolute;
+     z-index: 7;
+     width: 15vw;
      padding: 0 18px;
      background-color: white;
-     display: none;
+     max-height: 0;
      overflow: hidden;
+     transition: max-height 0.5s ease-out;
+     border-radius: 0px 0px 3px 3px;
+     margin-top: 4vw;
+ }
+ 
+ .accordion:after {
+     content: '\02795';
+     /* Unicode character for "plus" sign (+) */
+     font-size: 13px;
+     color: #777;
+     float: right;
+     margin-left: 5px;
+ }
+ 
+ .active:after {
+     content: "\2796";
+     /* Unicode character for "minus" sign (-) */
+ }
+ 
+ .help {
+     display: flex;
+     flex-wrap: nowrap;
+     list-style-type: none;
+     justify-content: center;
  }
