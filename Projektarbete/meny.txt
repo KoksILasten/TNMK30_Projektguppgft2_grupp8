@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Search</title>
+    <link href="indexstyle.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="javaprojekt.js"></script>
+</head>
+
+<body>
+  <div class="headernavbar">
+        <ul id="header">
+
+
+            <li class="text"><a href="aboutus.php"> About Us</a></li>
+            <li id="lego">
+                <a href="Index.php"><img src="legobit.png" alt="Picture couldn´t be laoded" style="width: 3vw;height:3vw;"></a>
+            </li>
+            <li class="text"><a href="help.php">Help</a></li>
+
+
+        </ul>
+    </div>

@@ -1,22 +1,9 @@
 <?php include"meny.txt"; ?>
-    <div class="headernavbar">
-        <ul id="header">
-
-
-            <li class="text"><a href="#sus"> About Us</a></li>
-            <li id="lego">
-                <a href="#suse"><img src="legobit.png" alt="Picture couldn´t be laoded" style="width: 3vw;height:3vw;"></a>
-            </li>
-            <li class="text"><a href="#moresus">Help</a></li>
-
-
-        </ul>
-    </div>
-
+  
 
 
     <div class="searchbar">
-        <form action="testinput.php" method="POST">
+        <form action="search_result.php" method="POST">
             <input type="text" placeholder="Search for your parts here...">
             <button class="search" type="submit"><i class="buttonsearch"></i></button>
         </form>
