@@ -32,46 +32,60 @@
 </div>
 
 <h2 style="text-align:center">Our Team</h2>
-<div class="row">
-  <div class="column">
+<div class="column">
     <div class="card">
-      <img src="adam.jpg" alt="Adam pic" style="width:100%">
-      <div class="container">
-        <h2>Adam Ljung</h2>
-        <p class="title">Greatest man alive and ever</p>
-        <p>Really cool and very handsome. Probably the best guy in the world.</p>
-        <p>Supermegacool.hotguy@hothothotmail.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="isaklego.jpg" alt="Mike" style="width:100%">
-      <div class="container">
-        <h2>Fisak Skott</h2>
-        <p class="title">n00b</p>
-        <p>Kan egentligen inte något egentligen. Helt vanlig blodsugare.</p>
-        <p>litensnopp@äckligmail.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-      <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+  <img src="adam.jpg" alt="Avatar" class="image">
+  <div class="overlay">My Name is Adam</div>
+  <p>Jag är 27 år gammal och bor i linköping</p>
+  <p>jane@example.com</p>
 </div>
+</div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+<div class="container">
+  <img src="isaklego.jpg" alt="Avatar" class="image">
+  <div class="overlay">My Name is Isak</div>
+  <p>Jag är 20 år gammal och bor i linköping</p>
+  <p>jane@example.com</p>
+</div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+<div class="container">
+  <img src="AK.jpeg" alt="Avatar" class="image">
+  <div class="overlay">My Name is Adham</div>
+  <p>Jag är 20 år gammal och bor i norrköping</p>
+  <p>a.kteileh2001@gmail.com</p>
+</div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+<div class="container">
+  <img src="jovan.jpg" alt="Avatar" class="image">
+  <div class="overlay">My Name is Jovan</div>
+  <p>Jag är 20 år gammal och bor i linköping</p>
+  <p>jane@example.com</p>
+</div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+<div class="container">
+  <img src="mange.png" alt="Avatar" class="image">
+  <div class="overlay">My Name is Magnus</div>
+  <p>Jag är 21 år gammal och bor i norrköping</p>
+  <p>jane@example.com</p>
+</div>
+    </div>
+  </div>
 
 
 
