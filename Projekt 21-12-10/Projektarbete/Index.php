@@ -4,7 +4,7 @@
 
 <div class="searchbar">
     <form action="search_result.php" method="GET">
-        <input type="text" name="userinput" min="2"  placeholder="Search for your parts here..." >
+        <input type="text" name="userinput" min="2" placeholder="Search for your parts here...">
         <button class="search" type="submit"></button>
     </form>
     <div class="help">
