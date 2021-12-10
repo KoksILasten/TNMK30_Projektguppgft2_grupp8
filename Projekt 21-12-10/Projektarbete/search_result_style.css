@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Stardos+Stencil&display=swap");
+body{
+	  background-image: url("legobakgrundblurrad.png");
+     /* Full height */
+     height: 100%;
+     width: auto;
+     /* Center and scale the image nicely */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     z-index: 1;
+}
+* {
+     box-sizing: border-box;
+     padding: 0%;
+     margin: 0%;
+ }
+ .headernavbar {
+     font-family: "Staatliches";
+     background-color: red;
+     overflow: hidden;
+     padding: 1vw;
+     border-bottom: yellow solid 1.5vw;
+     margin-left: -5vw;
+ }
+ 
+ .headernavbar a {
+     color: white;
+     text-align: center;
+     margin: 6vw;
+     /*scalar inte :/ kanske byt till vw om det ser snyggt ut*/
+     text-decoration: none;
+     font-size: 3vw;
+ }
+ 
+ .headernavbar :hover {
+     color: black;
+ }
+ 
+ .headernavbar .text:active {
+     color: black;
+ }
+ 
+ .headernavbar .text:active {
+     color: black;
+ }
+ 
+ #header {
+     display: flex;
+     flex-wrap: nowrap;
+     list-style-type: none;
+     justify-content: center;
+ }
+ 
+ .headernavbar img {
+     transform: rotate(40deg);
+ }
+
+ table {
+	 background: none;
+	 background-color: white;
+	 display: table;
+     border-collapse: separate;
+     box-sizing: border-box;
+     text-indent: initial;
+     border-spacing: 2vw;
+     border-color: grey;
+	 text-align: center; 
+	 margin-left: auto;
+	 margin-right: auto;
+ }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	text-align: center;
+}
