@@ -2,6 +2,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-image: url("legobakgrund.jpeg");
 }
 
 html {
@@ -13,17 +14,21 @@ html {
 }
 
 .column {
-  float: left;
-  width: 33.3%;
+  float: right;
+  width: 20%;
   margin-bottom: 16px;
-  padding: 0 8px;
-
+  padding: 200px 20px 10px;
+  
   
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
+  background-color: white;
+  opacity: 80%;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .about-section {
@@ -145,8 +150,11 @@ html {
 
 .image {
   display: block;
-  width: 100%;
-  height: auto;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 6px solid;
+  
 }
 
 .overlay {
@@ -166,4 +174,10 @@ html {
 
 .container:hover .overlay {
   opacity: 1;
+}
+
+h2{
+	background-color: red;
+	border-radius: 50%;
+  border: 6px solid black;
 }
