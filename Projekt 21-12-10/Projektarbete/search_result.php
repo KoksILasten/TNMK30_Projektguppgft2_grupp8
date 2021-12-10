@@ -32,9 +32,11 @@
 	$search = $_GET['userinput'];
     
 	$query = "SELECT parts.PartID, inventory.ItemID, sets.SetID, inventory.ColorID, colors.Colorname, sets.setname, sets.year, parts.partname FROM parts, inventory, sets, colors 
-	WHERE (parts.PartID LIKE '%$search%' OR parts.partname LIKE '%$search%') AND  inventory.ItemID = parts.PartID AND sets.SetID = inventory.SetID AND sets.SetID = inventory.ColorID AND colors.ColorID=inventory.ColorID AND inventory.ItemTypeID='P' ";
-//	Ställ	frågan		
+	WHERE (parts.PartID LIKE '%$search%' OR parts.partname LIKE '%$search%') AND  inventory.ItemID = parts.PartID AND sets.SetID = inventory.SetID AND sets.SetID = inventory.ColorID AND 
+	colors.ColorID=inventory.ColorID AND inventory.ItemTypeID='P'";
+	//	Ställ	frågan		
 	$result = mysqli_query($connection, $query);
+	
 	
 	
 	print("<table>\n<tr>");
@@ -61,9 +63,7 @@
 			}else if($imageData['has_jpg']){
 				$filename = "P/$imgColor/$imgID.jpg";
 			}
-			else{
-				print("no Image");
-			}
+			
 		
 		$route = $link.$filename;
 	
@@ -75,6 +75,7 @@
 		print("<td><img src=\"$route\" alt=\"image not found\"></td>");
 		print("<td> $year </td>");
 		print ("</tr>\n");
+	
 	}
 	print "<tr>\n";
 	mysqli_close($connection);
