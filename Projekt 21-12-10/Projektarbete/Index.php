@@ -4,8 +4,8 @@
 
 <div class="searchbar">
     <form action="search_result.php" method="GET">
-        <input type="text" name="userinput" min="2" placeholder="Search for your parts here...">
-        <button class="search" type="submit"></button>
+        <input type="search" id="Searchinput" name="userinput"  placeholder="Search for your parts here..."  required  >
+        <button class="search" id="searchtext" type="submit"></button>
     </form>
     <div class="help">
         <button class="accordion" onclick="drop()">How to search</button>

@@ -2,7 +2,7 @@
 body{
 	  background-image: url("legobakgrundblurrad.png");
      /* Full height */
-     height: 100%;
+     height: auto;
      width: auto;
      /* Center and scale the image nicely */
      background-position: center;
