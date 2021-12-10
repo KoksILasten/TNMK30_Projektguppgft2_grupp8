@@ -158,9 +158,11 @@ input[type="text"]:focus {
   transition: max-height 0.5s ease-out;
   border-radius: 0px 0px 3px 3px;
   margin-top: 3.5vw;
-  font-size: 0.9vw;
+  font-size: 1vw;
 }
-
+.panelOpen {
+  max-height: 370px; /*Transtion fungerar inte om man använder fit-content*/
+}
 .accordion:after {
   content: "\02795";
   /* Unicode character for "plus" sign (+) */

@@ -1,4 +1,4 @@
-<?php include "meny.txt"; ?>
+<!-- <?php include "meny.txt"; ?> -->
 
 
 
@@ -8,7 +8,7 @@
         <button class="search" type="submit"><i class="buttonsearch"></i></button>
     </form>
     <div class="help">
-        <button class="accordion" onclick="dropdown()">How to search</button>
+        <button class="accordion" onclick="drop()">How to search</button>
 
         <div id="myPanel" class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ultrices tellus. Etiam pharetra lectus at purus pharetra finibus. Phasellus at commodo nisi, sit amet convallis nibh. Duis et pretium metus. Sed malesuada dapibus
