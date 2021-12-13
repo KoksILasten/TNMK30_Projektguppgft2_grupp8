@@ -14,7 +14,7 @@
         <ul id="header">
 
 
-            <li class="text"><a href="aboutus.php"> About Us</a></li>
+            <li class="text"><a href="aboutsus.php"> About Us</a></li>
             <li id="lego">
                 <a href="Index.php"><img src="legobit.png" alt="Picture couldn´t be laoded"></a>
             </li>

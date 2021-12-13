@@ -5,80 +5,6 @@ body {
   background-image: url("legobakgrund.jpeg");
 }
 
-html {
-  box-sizing: border-box;
-}
-/*
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}*/
-
-.column {
-  float: right;
-  width: 20%;
-  margin-bottom: 16px;
-  padding: 200px 20px 10px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-  background-color: white;
-  opacity: 80%;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-image: url("legobakgrundblurrad.png");
-  /* Full height */
-  height: 100%;
-  width: auto;
-  overflow: hidden;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(2px);
-
-  z-index: 1;
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after,
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
-
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -141,16 +67,6 @@ html {
   z-index: 1;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  position: relative;
-  width: 50%;
-  max-width: 300px;
-}
-
 .image {
   display: block;
   height: 150px;
@@ -158,31 +74,12 @@ html {
   border-radius: 50%;
   border: 6px solid;
 }
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 100%;
-  transition: 0.5s ease;
-  opacity: 0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
+h1 {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
 }
 
-.container:hover .overlay {
-  opacity: 1;
-}
-
-h2 {
-  background-color: red;
-  border-radius: 50%;
-  border: 6px solid black;
-}
 /*
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 */
