@@ -141,7 +141,7 @@ p
 	color: black;
 	margin-top: 1vw;
 	margin-bottom: 1vw;
-	font-size: 1vw;
+	font-size: 1.5vw;
 }
 
 .images
@@ -150,8 +150,9 @@ p
 	margin-right: auto;
 	margin-bottom: 2vw;
 	display: block;
-	width: 40%;
+	width: 35%;
 	height: auto;
+	border: 2px solid black;
 }
 
 
