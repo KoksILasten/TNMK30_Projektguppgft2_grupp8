@@ -12,11 +12,11 @@ html {
   margin: 0%;
 }
 
- .headernavbar img {
-     transform: rotate(45deg);
-	 width: 3vw;
-	 height: 3vw;
- }
+.headernavbar img {
+  transform: rotate(45deg);
+  width: 3vw;
+  height: 3vw;
+}
 #bg-img {
   background-image: url("legobakgrund.jpeg");
   /* Full height */
@@ -69,7 +69,6 @@ html {
 }
 
 .headernavbar img {
-	
   transform: rotate(45deg);
 }
 
@@ -166,7 +165,7 @@ input[type="search"]:focus {
   margin-top: 3.5vw;
   font-size: 1vw;
 }
-.panelOpen{
+.panelOpen {
 }
 
 .accordion:after {
@@ -240,83 +239,79 @@ input[type="search"]:focus {
   background-color: #555;
 }
 
-
- 
 @media only screen and (max-width: 700px) {
+  body {
+    font-size: 1em;
+  }
 
-   body { 
-      font-size: 1em; 
-   }
-	
-	 .headernavbar {
-     font-family: "Staatliches";
-     background-color: red;
-     overflow: hidden;
-     padding: 10%;
-     border-bottom: yellow solid 5vw;
-     margin-left: -5vw;
- }
- 
+  .headernavbar {
+    font-family: "Staatliches";
+    background-color: red;
+    overflow: hidden;
+    padding: 10%;
+    border-bottom: yellow solid 5vw;
+    margin-left: -5vw;
+  }
+
   .headernavbar a {
-     color: white;
-     text-align: center;
-     margin: 6vw;
-     /* scalar inte :/ kanske byt till vw om det ser snyggt ut */
-     text-decoration: none;
-     font-size: 8vw;
-	 
- }
- 
- .headernavbar img {
-     transform: rotate(45deg);
-	 width: 8vw;
-	 height: 8vw;
- }
+    color: white;
+    text-align: center;
+    margin: 6vw;
+    /* scalar inte :/ kanske byt till vw om det ser snyggt ut */
+    text-decoration: none;
+    font-size: 8vw;
+  }
+
+  .headernavbar img {
+    transform: rotate(45deg);
+    width: 8vw;
+    height: 8vw;
+  }
   .searchbar {
-  z-index: 4;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-top: 10vw;
-}
-input[type="search"] {
-  font-size: 4vw;
-  background-color: white;
-  background-image: url("LEGO_logo.svg.png");
-  background-position: 1vw;
-  background-size: 4vw 4vw;
-  background-repeat: no-repeat;
-  padding: 1.2vw 2vw 1.2vw 6vw;
-  outline: none;
-  border-radius: 4px;
-}
+    z-index: 4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10vw;
+  }
+  input[type="search"] {
+    font-size: 4vw;
+    background-color: white;
+    background-image: url("LEGO_logo.svg.png");
+    background-position: 1vw;
+    background-size: 4vw 4vw;
+    background-repeat: no-repeat;
+    padding: 1.2vw 2vw 1.2vw 6vw;
+    outline: none;
+    border-radius: 4px;
+  }
 
-.accordion {
-  position: absolute;
-  z-index: 7;
-  cursor: pointer;
-  padding: 1vw;
-  margin-top: 1vw;
-  width: 20vw;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-  border-radius: 3px;
-}
+  .accordion {
+    position: absolute;
+    z-index: 7;
+    cursor: pointer;
+    padding: 1vw;
+    margin-top: 1vw;
+    width: 20vw;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 3px;
+  }
 
-.panel {
-  position: absolute;
-  z-index: 7;
-  width: 25vw;
-  padding: 0 2vh;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  border-radius: 0px 0px 3px 3px;
-  margin-top: 11vw;
-  font-size: 3vw;
-}
+  .panel {
+    position: absolute;
+    z-index: 7;
+    width: 25vw;
+    padding: 0 2vh;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    border-radius: 0px 0px 3px 3px;
+    margin-top: 11vw;
+    font-size: 3vw;
+  }
 }
