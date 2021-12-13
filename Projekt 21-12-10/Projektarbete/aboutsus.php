@@ -15,7 +15,7 @@
 
             <li class="text"><a href="aboutsus.php"> About Us</a></li>
             <li id="lego">
-                <a href="Index.php"><img src="legobit.png" alt="Picture couldn´t be laoded" style="width: 3vw;height:3vw;"></a>
+                <a href="Index.php"><img src="legobit.png" alt="Picture couldn´t be laoded"></a>
             </li>
             <li class="text"><a href="help.php">Help</a></li>
 

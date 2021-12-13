@@ -6,13 +6,6 @@ html {
   text-align: center;
   font-family: "Staatliches";
 }
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
 * {
   box-sizing: border-box;
   padding: 0%;
@@ -72,9 +65,10 @@ html {
   list-style-type: none;
   justify-content: center;
 }
-
 .headernavbar img {
   transform: rotate(45deg);
+  width: 3vw;
+  height: 3vw;
 }
 .textheader {
   text-decoration: underline overline white;
@@ -119,4 +113,69 @@ html {
 .flex-item ul {
   text-align: left;
   list-style: none;
+}
+/* -----------------------SMALL SIZE-----------------------*/
+@media only screen and (max-width: 700px) {
+  body {
+    font-size: 1em;
+  }
+
+  .headernavbar {
+    font-family: "Staatliches";
+    background-color: red;
+    overflow: hidden;
+    padding: 10%;
+    border-bottom: yellow solid 5vw;
+    margin-left: -5vw;
+  }
+
+  .headernavbar a {
+    color: white;
+    text-align: center;
+    margin: 6vw;
+    font-size: 8vw;
+    text-decoration: none;
+  }
+
+  .headernavbar img {
+    transform: rotate(45deg);
+    width: 8vw;
+    height: 8vw;
+  }
+  .textheader {
+    text-decoration: underline overline white;
+    color: white;
+    text-align: center;
+    z-index: 5;
+    font-size: 4em;
+    padding-top: 2vw;
+  }
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 5;
+    width: auto;
+  }
+
+  .flex-item {
+    color: black;
+    background: white;
+    border-radius: 5px;
+    padding: 1vw;
+    margin-top: 10px;
+    color: black;
+    font-size: 1em;
+    text-align: center;
+  }
+  .flex-item img {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+    outline: black solid 2px;
+    object-fit: scale-down;
+  }
 }
