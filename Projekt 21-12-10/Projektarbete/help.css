@@ -1,73 +1,249 @@
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Stardos+Stencil&display=swap");
+
+/* ------------------------------------ Menu bar ----------------------------- */
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
 }
 
-.help_body {
-  background-image: url("legobakgrundblurrad.png");
-  font-family: "Staatliches";
-  font-size: 2vw;
-  color: white;
-  padding: 3vw;
-  text-align: center;
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+ .headernavbar img {
+     transform: rotate(45deg);
+	 width: 3vw;
+	 height: 3vw;
+ }
+#bg-img {
+  background-image: url("legobakgrund.jpeg");
   /* Full height */
   height: 100%;
   width: auto;
-  overflow: auto;
-
+  overflow: hidden;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  filter: blur(2px);
   z-index: 1;
 }
 
-.helpsection {
-  margin-top: 1vw;
-  margin-bottom: 14vw;
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  border-radius: 15px;
-  background-color: white;
+.headernavbar {
+  font-family: "Staatliches";
+  background-color: red;
+  overflow: hidden;
   padding: 1vw;
-
-  z-index: 1;
+  border-bottom: yellow solid 1.5vw;
+  margin-left: -5vw;
 }
 
-h1 {
-  text-decoration: underline overline white;
-}
-
-h2 {
-  color: red;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
+.headernavbar a {
+  color: white;
+  text-align: center;
+  margin: 6vw;
   font-size: 3vw;
+  text-decoration: none;
 }
 
-h4 {
-  color: red;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-  font-size: 2vw;
-  text-decoration: underline red;
-}
-
-p {
+.headernavbar :hover {
   color: black;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-  font-size: 1vw;
 }
 
-.images {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2vw;
-  display: block;
-  width: 40%;
-  height: 40%;
+.headernavbar .text:active {
+  color: black;
 }
+
+.headernavbar .text:active {
+  color: black;
+}
+
+#header {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.headernavbar img {
+	
+  transform: rotate(45deg);
+}
+
+/* ------------------------------------ Desktop Size ----------------------------- */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.help_body
+{
+	background-image: url("legobakgrundblurrad.png");
+	font-family: "Staatliches";
+	font-size: 2vw;
+	color: white;
+	padding: 3vw;
+	text-align: center;
+	/* Full height */
+	height: 100%;
+	width: auto;
+	overflow: auto;
+	
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	z-index: 1;
+}
+
+.helpsection
+{
+	margin-top: 1vw;
+	margin-bottom: 14vw;
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-radius: 15px;
+	background-color: white;
+	padding: 1vw;
+
+	z-index: 1;
+}
+
+h1
+{
+	text-decoration: underline overline white;
+}
+
+h2
+{
+	color: red;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	font-size: 3vw;
+}
+
+h4
+{
+	color: red;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	font-size: 2vw;
+	text-decoration: underline red;
+}
+
+p 
+{
+	color: black;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	font-size: 1vw;
+}
+
+.images
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2vw;
+	display: block;
+	width: 40%;
+	height: auto;
+}
+
+
+/* ------------------------------------ When media window is smaller than 700px ----------------------------- */
+
+@media only screen and (max-width: 700px) {
+
+	body 
+	{ 
+	  font-size: 1em; 
+	}
+	
+	.headernavbar 
+	{
+		font-family: "Staatliches";
+		background-color: red;
+		overflow: hidden;
+		padding: 10%;
+		border-bottom: yellow solid 5vw;
+		margin-left: -5vw;
+	}
+	 
+	.headernavbar a 
+	{
+		 color: white;
+		 text-align: center;
+		 margin: 6vw;
+		 font-size: 8vw;
+		 text-decoration: none;
+		 
+	}
+	 
+	.headernavbar img 
+	{
+		 transform: rotate(45deg);
+		 width: 8vw;
+		 height: 8vw;
+	}
+	
+	h1
+	{
+		text-decoration: underline overline white;
+		font-size:8vw;
+	}
+
+	h2
+	{
+		color: red;
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+		font-size: 5vw;
+	}
+
+	h4
+	{
+		color: red;
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+		font-size: 4vw;
+		text-decoration: underline red;
+	}
+
+	p 
+	{
+		color: black;
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+		font-size: 3vw;
+	}
+	
+	.images
+	{
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2vw;
+		display: block;
+		width: 70%;
+		height: auto;
+	}
+	
+	.helpsection
+{
+	margin-top: 1vw;
+	margin-bottom: 45vw;
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-radius: 15px;
+	background-color: white;
+	padding: 1vw;
+
+	z-index: 1;
+}
+}
+

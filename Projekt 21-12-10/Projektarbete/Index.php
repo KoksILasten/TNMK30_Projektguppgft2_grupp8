@@ -11,10 +11,8 @@
         <button class="accordion" onclick="drop()">How to search</button>
 
         <div id="myPanel" class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ultrices tellus. Etiam pharetra lectus at purus pharetra finibus. Phasellus at commodo nisi, sit amet convallis nibh. Duis et pretium metus. Sed malesuada dapibus
-                risus, a venenatis ex placerat ac. Maecenas luctus magna sed sodales tempor. Nulla tincidunt ac odio ac auctor. Praesent ut nulla mi. Sed accumsan, nibh at semper tincidunt, turpis risus porttitor sem, quis fermentum nisl lorem accumsan
-                magna. Curabitur venenatis, lectus et feugiat tempus, sapien ipsum elementum lectus, id eleifend sapien ex vitae libero. Duis nibh sapien, congue nec pulvinar eget, tincidunt ac arcu. Donec cursus volutpat risus ac semper. In tortor
-                dolor, consectetur vitae porta nec, auctor ac lectus.</p>
+            <p>Step 1: Click on the search bar.</p>
+			<p>Step 2: Type in what you want to search for.</p>
         </div>
 
     </div>

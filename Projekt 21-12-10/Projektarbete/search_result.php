@@ -15,13 +15,23 @@
 
             <li class="text"><a href="aboutus.php"> About Us</a></li>
             <li id="lego">
-                <a href="Index.php"><img src="legobit.png" alt="Picture couldn´t be laoded" style="width: 3vw;height:3vw;"></a>
+                <a href="Index.php"><img src="legobit.png" alt="Picture couldn´t be laoded" ></a>
             </li>
             <li class="text"><a href="help.php">Help</a></li>
 
 
         </ul>
     </div>
+	
+	 <div class="searchbar">
+    <form action="search_result.php" method="GET">
+        <input type="search" id="Searchinput" name="userinput"  placeholder="Search for your parts here..."  required  >
+        <button class="search" id="searchtext" type="submit"></button>
+    </form>
+    
+</div>
+
+	
 <?php
 // Koppla	upp	mot	databasen
 	$connection = mysqli_connect("mysql.itn.liu.se","lego","","lego");
@@ -31,14 +41,21 @@
 	
 	$search = $_GET['userinput'];
     
+	if($search 
 	$query = "SELECT parts.PartID, inventory.ItemID, sets.SetID, inventory.ColorID, colors.Colorname, sets.setname, sets.year, parts.partname FROM parts, inventory, sets, colors 
 	WHERE (parts.PartID LIKE '%$search%' OR parts.partname LIKE '%$search%') AND  inventory.ItemID = parts.PartID AND sets.SetID = inventory.SetID AND sets.SetID = inventory.ColorID AND 
 	colors.ColorID=inventory.ColorID AND inventory.ItemTypeID='P'";
 	//	Ställ	frågan		
 	$result = mysqli_query($connection, $query);
+	$numrows = mysqli_num_rows($result);
 	
-	
-	
+	if ($numrows === 0){
+		print("<h1>No result for your search  '$search' </h1>");
+		print("<h1>Try again!</h1>");
+		
+	} 
+else {
+	print("<h1>Your search '$search' gave $numrows results</h1>");
 	print("<table>\n<tr>");
 	print("<th>Setname</th>");
 	print("<th>Color</th>");
@@ -77,10 +94,12 @@
 		print ("</tr>\n");
 	
 	}
+	}
 	print "<tr>\n";
 	mysqli_close($connection);
 	print("</table>");
+
 	?>
-	 
+	
 	</body>
 	</html>

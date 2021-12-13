@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Stardos+Stencil&display=swap");
-body{
+body, html{
+	
 	  background-image: url("legobakgrundblurrad.png");
      /* Full height */
-     height: auto;
+     height: 100%;
      width: auto;
      /* Center and scale the image nicely */
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
      z-index: 1;
+	
+	 
+	 
 }
 * {
      box-sizing: border-box;
@@ -53,7 +57,9 @@ body{
  }
  
  .headernavbar img {
-     transform: rotate(40deg);
+     transform: rotate(45deg);
+	  width: 3vw;
+	 height: 3vw;
  }
 
  table {
@@ -74,3 +80,115 @@ table, th, td {
     border-collapse: collapse;
 	text-align: center;
 }
+
+h1{
+	text-align: center;
+	color: white;
+     text-align: center;
+     margin: 1vw;
+     /*scalar inte :/ kanske byt till vw om det ser snyggt ut*/
+     text-decoration: none;
+     font-size: 100%;
+}
+
+
+.searchbar {
+  z-index: 4;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 1vw;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.searchbar .search {
+  margin-left: -1vw;
+  width: 4vh;
+  height: 8vh;
+  background: red;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
+  background-image: url("search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input {
+  border: none;
+  transition: all 1s;
+  flex-grow: 0;
+  flex-basis: auto;
+}
+
+input:focus {
+  outline: none;
+  flex-grow: 20%;
+}
+
+input[type="search"] {
+  font-size: 100%;
+  background-color: white;
+  background-image: url("LEGO_logo.svg.png");
+  background-position: 1vw;
+  background-size: 2vw 2vw;
+  background-repeat: no-repeat;
+  padding: 1.2vw 2vw 1.2vw 4vw;
+  outline: none;
+  border-radius: 4px;
+}
+
+input[type="search"]:focus {
+  transition: all 1s;
+  flex-grow: 0.1;
+  flex-basis: auto;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+@media only screen and (max-width: 500px) {
+
+   body { 
+      font-size: 1em; 
+   }
+	
+	 .headernavbar {
+     font-family: "Staatliches";
+     background-color: red;
+     overflow: hidden;
+     padding: 10%;
+     border-bottom: yellow solid 5vw;
+     margin-left: -5vw;
+ }
+ 
+  .headernavbar a {
+     color: white;
+     text-align: center;
+     margin: 6vw;
+     /*scalar inte :/ kanske byt till vw om det ser snyggt ut*/
+     text-decoration: none;
+     font-size: 8vw;
+	 
+ }
+ 
+ .headernavbar img {
+     transform: rotate(45deg);
+	 width: 8vw;
+	 height: 8vw;
+ }
+ .searchbar {
+  z-index: 4;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 10vw;
+}
+}
+

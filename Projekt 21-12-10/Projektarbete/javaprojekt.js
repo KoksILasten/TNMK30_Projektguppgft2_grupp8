@@ -1,14 +1,38 @@
-function drop() {
-  var element = document.getElementById("myPanel");
-  var plusminus = document.getElementsByClassName("accordion");
+// function dropdown() {
+  // var acc = document.getElementsByClassName("accordion");
+   // var i = 0;
+  // acc[0].classList.toggle("active");
 
-  plusminus[0].classList.toggle("active"); //toggle active class på accordion, dvs göra + till - :)
+  // let panel = document.getElementById("myPanel");
+  // if (panel.style.maxHeight) {
+    // panel.style.maxHeight = "0px";
+  // } else {
+    // panel.style.maxHeight = panel.scrollHeight + "px";
+  // }
 
-  if (!element.classList.contains("panelOpen")) {
-    element.classList.add("panelOpen");
-    element.style.maxHeight = element.scrollHeight + "px"; //ger myPanel ett ID ett max-height efter hur lång texten är.
-  } else {
-    element.classList.remove("panelOpen");
-    element.style.maxHeight = null;
-  }
+  // acc[0].addEventListener("click", function () {
+          /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+
+    // /* Toggle between hiding and showing the active panel */
+    // var panel = this.nextElementSibling;
+    // if (panel.style.maxHeight) {
+      // panel.style.maxHeight = null;
+    // } else {
+      // panel.style.maxHeight = panel.scrollHeight + "px";
+    // }
+  // });
+// }
+function drop(){
+	var element = document.getElementById("myPanel");
+	let panel = document.getElementById("myPanel");
+	
+	if(!element.classList.contains("panelOpen")){
+		element.classList.add("panelOpen");
+		panel.style.maxHeight = panel.scrollHeight + "px";
+	}else{
+		element.classList.remove("panelOpen");
+		panel.style.maxHeight = null;
+	}
 }
+
