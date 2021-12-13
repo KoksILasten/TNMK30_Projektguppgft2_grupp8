@@ -13,6 +13,7 @@
         <div id="myPanel" class="panel">
             <ol>
                 <li>Click with the cursor on the search bar.</li>
+				<br></br>
                 <li>Enter a valid brickname or brick ID</li>
                 <ul>
                     <p>Example:
