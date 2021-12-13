@@ -1,73 +1,73 @@
-
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-.help_body
-{
-	background-image: url("legobakgrundblurrad.png");
-	font-family: "Staatliches";
-	font-size: 2vw;
-	color: white;
-	padding: 3vw;
-	text-align: center;
-	/* Full height */
-	height: 100%;
-	width: auto;
-	overflow: auto;
-	
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+.help_body {
+  background-image: url("legobakgrundblurrad.png");
+  font-family: "Staatliches";
+  font-size: 2vw;
+  color: white;
+  padding: 3vw;
+  text-align: center;
+  /* Full height */
+  height: 100%;
+  width: auto;
+  overflow: auto;
 
-	z-index: 1;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  z-index: 1;
 }
 
-.helpsection
-{
-	margin-top: 1vw;
-	margin-bottom: 14vw;
-	text-align: center;
-	margin-left: 10%;
-	margin-right: 10%;
-	border-radius: 15px;
-	background-color: white;
-	padding: 1vw;
+.helpsection {
+  margin-top: 1vw;
+  margin-bottom: 14vw;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 15px;
+  background-color: white;
+  padding: 1vw;
 
-	z-index: 1;
+  z-index: 1;
 }
 
-h2
-{
-	color: red;
-	margin-top: 1vw;
-	margin-bottom: 1vw;
-	font-size: 3vw;
+h1 {
+  text-decoration: underline overline white;
 }
 
-h4
-{
-	color: red;
-	margin-top: 1vw;
-	margin-bottom: 1vw;
-	font-size: 2vw;
+h2 {
+  color: red;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  font-size: 3vw;
 }
 
-p 
-{
-	color: black;
-	margin-top: 1vw;
-	margin-bottom: 1vw;
-	font-size: 2vw;
+h4 {
+  color: red;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  font-size: 2vw;
+  text-decoration: underline red;
 }
 
-.images
-{
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 2vw;
-	display: block;
-	width: 40%;
-	height: 40%;
+p {
+  color: black;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  font-size: 1vw;
+}
+
+.images {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vw;
+  display: block;
+  width: 40%;
+  height: 40%;
 }
