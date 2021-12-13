@@ -11,8 +11,17 @@
         <button class="accordion" onclick="drop()">How to search</button>
 
         <div id="myPanel" class="panel">
-            <p>Step 1: Click on the search bar.</p>
-			<p>Step 2: Type in what you want to search for.</p>
+            <ol>
+                <li>Click with the cursor on the search bar.</li>
+                <li>Enter a valid brickname or brick ID</li>
+                <ul>
+                    <p>Example:
+                    <p>
+                        <li>2x2 red brick</li>
+                        <li>3004</li>
+                </ul>
+
+            </ol>
         </div>
 
     </div>

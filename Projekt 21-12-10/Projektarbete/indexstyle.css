@@ -151,7 +151,7 @@ input[type="search"]:focus {
 .panel {
   position: absolute;
   z-index: 7;
-  width: 15vw;
+  width: 17vw;
   padding: 0 2vh;
   background-color: white;
   max-height: 0;
@@ -159,7 +159,14 @@ input[type="search"]:focus {
   transition: max-height 0.5s ease-out;
   border-radius: 0px 0px 3px 3px;
   margin-top: 3.5vw;
-  font-size: 1vw;
+  font-size: 1.2em;
+  text-align: left;
+}
+.panel ul {
+  padding-left: 1vw;
+}
+.panel p {
+  font-weight: bold;
 }
 
 .accordion:after {
@@ -296,16 +303,16 @@ input[type="search"]:focus {
   }
 
   .panel {
-    position: absolute;
+    position: relative;
     z-index: 7;
-    width: 25vw;
-    padding: 0 2vh;
+    width: 20vw;
+    padding: 0 1vh;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     border-radius: 0px 0px 3px 3px;
-    margin-top: 11vw;
+    margin-top: 5vw;
     font-size: 3vw;
   }
 }
