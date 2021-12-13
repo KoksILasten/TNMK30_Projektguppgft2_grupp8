@@ -115,13 +115,14 @@ input:focus {
 input[type="search"] {
   font-size: 1vw;
   background-color: white;
-  background-image: url("LEGO_logo.svg.png");
+  background-image: url("LEGO_logo.png");
   background-position: 1vw;
   background-size: 2vw 2vw;
   background-repeat: no-repeat;
-  padding: 1.2vw 4vw 1.2vw 4vw;
+  padding: 1.2vw 2vw 1.2vw 4vw;
   outline: none;
   border-radius: 4px;
+  transition-delay: 1s;
 }
 
 input[type="search"]:focus {
