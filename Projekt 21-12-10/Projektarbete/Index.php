@@ -17,7 +17,7 @@
                 <ul>
                     <p>Example:
                     <p>
-                        <li>2x2 red brick</li>
+                        <li>Brick 2 x 2</li>
                         <li>3004</li>
                 </ul>
 
