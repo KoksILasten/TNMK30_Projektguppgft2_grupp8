@@ -17,8 +17,8 @@
                 <ul>
                     <p>Example:
                     <p>
-                        <li>Brick 2 x 2</li>
-                        <li>3004</li>
+                        <li>Brick 2 x 2 ([item][size])</li>
+                        <li>3004 ([itemID])</li>
                 </ul>
 
             </ol>
