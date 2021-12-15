@@ -13,7 +13,7 @@
         <div id="myPanel" class="panel">
             <ol>
                 <li>Click with the cursor on the search bar.</li>
-				<br></br>
+                <br></br>
                 <li>Enter a valid brickname or brick ID</li>
                 <ul>
                     <p>Example:
@@ -26,6 +26,17 @@
         </div>
 
     </div>
+    <?php
+    if (isset($_GET['error'])) {
+        $showError = true;
+    } else {
+        $showError = false;
+    }
+    if ($showError) {
+        // Display error message
+        echo '<h3>Write atleast 3 characters </h3>';
+    }
+    ?>
 </div>
 
 
