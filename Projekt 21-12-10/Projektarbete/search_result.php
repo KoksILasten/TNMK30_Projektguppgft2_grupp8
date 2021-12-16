@@ -13,7 +13,7 @@
 	<div class="headernavbar">
 		<ul id="header">
 
-			<li class="text"><a href="aboutus.php"> About Us</a></li>
+			<li class="text"><a href="aboutsus.php"> About Us</a></li>
 			<li id="lego">
 				<a href="Index.php"><img src="legobit.png" alt="Picture couldnt be laoded"></a>
 			</li>
@@ -26,6 +26,7 @@
 	<div class="searchbar">
 		<form action="search_result.php" method="GET">
 			<input type="search" id="Searchinput" name="userinput" placeholder="Search for your parts here..." required>
+			<input type="hidden" id="offset" name="offset" value="0">
 			<button class="search" id="searchtext" type="submit"></button>
 		</form>
 
@@ -34,13 +35,8 @@
 
 	<?php
 	// Koppla	upp	mot	databasen
-	try {
-		$connection = mysqli_connect("mysql.itn.liu.se", "lego", "", "lego");
-	} catch (Exception $e) {
-		// Catch error messages if connection failed
-		$error = $e->getMessage();
-		echo $error;
-	}
+	$connection = mysqli_connect("mysql.itn.liu.se", "lego", "", "lego");
+	
 	if (!$connection) {
 		die('MySQL connection error');
 	}
@@ -50,23 +46,57 @@
 	}
 	$search = $_GET['userinput'];
 
-	$query = "SELECT parts.PartID, inventory.ItemID, sets.SetID, inventory.ColorID, colors.Colorname, sets.setname, sets.year, parts.partname FROM parts, inventory, sets, colors 
-		WHERE (parts.PartID LIKE '%$search%' OR parts.partname LIKE '%$search%') AND  inventory.ItemID = parts.PartID AND sets.SetID = inventory.SetID AND sets.SetID = inventory.ColorID AND 
-		colors.ColorID=inventory.ColorID AND inventory.ItemTypeID='P'";
-	//	Ställ	frågan		
-	$result = mysqli_query($connection, $query);
-	$numrows = mysqli_num_rows($result);
-	$numberOfPages = ceil($numrows / $limit);
 
-	// Find which page the user is on
-	if (!isset($_GET['page'])) {
-		$page = 1;
-	} else {
-		$page = $_GET['page'];
+	$limit = 10;
+	$offset = $_GET['offset']; //+ blir fel eller något ://
+	
+		if(is_numeric($search[0])){
+		$fullquery ="SELECT DISTINCT parts.PartID, inventory.ItemID, inventory.ColorID, parts.partname, colors.Colorname
+			FROM parts, inventory, colors, images
+			WHERE parts.PartID LIKE '$search' 
+			AND inventory.ItemTypeID='P' 
+			AND inventory.ItemID = parts.PartID 
+			AND inventory.ColorID = colors.ColorID
+			AND colors.ColorID=images.ColorID LIMIT $limit OFFSET $offset";
+			$fullresult = mysqli_query($connection, $fullquery);
+			$numrows = mysqli_num_rows($fullresult);
+			if($numrows === 0){
+			$fullquery ="SELECT DISTINCT parts.PartID, inventory.ItemID, inventory.ColorID, parts.partname, colors.Colorname
+			FROM parts, inventory, colors, images
+			WHERE parts.PartID LIKE '%$search%' 
+			AND inventory.ItemTypeID='P' 
+			AND inventory.ItemID = parts.PartID 
+			AND inventory.ColorID = colors.ColorID
+			AND colors.ColorID=images.ColorID LIMIT $limit OFFSET $offset";
+			}
+			
+	}else{
+	    $fullquery = "SELECT DISTINCT parts.PartID, inventory.ItemID, inventory.ColorID, parts.partname, colors.Colorname
+			FROM parts, inventory, colors, images
+			WHERE parts.Partname LIKE '$search' 
+			AND inventory.ItemTypeID='P'
+			AND inventory.ItemID = parts.PartID 
+			AND inventory.ColorID = colors.ColorID
+			AND colors.ColorID=images.ColorID LIMIT $limit OFFSET $offset";
+			$fullresult = mysqli_query($connection, $fullquery);
+			$numrows = mysqli_num_rows($fullresult);
+			if($numrows === 0){
+			$fullquery = "SELECT DISTINCT parts.PartID, inventory.ItemID, inventory.ColorID, parts.partname, colors.Colorname
+			FROM parts, inventory, colors, images
+			WHERE parts.Partname LIKE '%$search%' 
+			AND inventory.ItemTypeID='P'
+			AND inventory.ItemID = parts.PartID
+			AND inventory.ColorID = colors.ColorID			
+			AND colors.ColorID=images.ColorID LIMIT $limit OFFSET $offset";
+			}
 	}
-
-	// Calculates which search results to show, based on current page
-	$thisPageFirstResult = ($page - 1) * $limit;
+	
+	$pagequery	= "SELECT DISTINCT parts.PartID, parts.Partname FROM parts WHERE (parts.Partname LIKE '%$search%' OR parts.PartID LIKE '%$search%')";
+	
+	$fullresult = mysqli_query($connection, $pagequery);
+	$result = mysqli_query($connection, $fullquery);
+	$numrows = mysqli_num_rows($fullresult);
+	$numberOfPages = ceil($numrows / $limit);
 
 	if ($numrows === 0) {
 		echo ("<h1>No result for your search  '$search' </h1>");
@@ -77,15 +107,13 @@
 		echo ("<th>Picture</th>");
 		echo ("<th>Partname</th>");
 		echo ("<th>Color</th>");
-		echo ("<th>Year</th>");
 		echo ("<th>Link</th>");
 		while ($row = mysqli_fetch_array($result)) {
 			$imgID =  $row['ItemID'];
 			$imgColor = $row['ColorID'];
 			$setName = $row['setname'];
-			$color = $row['Colorname'];
 			$partname = $row['partname'];
-			$year = $row['year'];
+			$colorname = $row['Colorname'];
 			$link = "http://www.itn.liu.se/~stegu76/img.bricklink.com/";
 
 			$imagequery = "SELECT * FROM images WHERE ItemID='$imgID' AND ColorID='$imgColor'";
@@ -97,25 +125,35 @@
 			} else if ($imageData['has_jpg']) {
 				$filename = "P/$imgColor/$imgID.jpg";
 			}
-
-
+			
 			$route = $link . $filename;
-			//	$blockquery = "Select * FROM "
-
-
 			echo ("<tr>");
 			echo ("<td><img src=\"$route\" alt=\"image not found\"></td>");
 			echo ("<td> $partname </td>");
-			echo ("<td> $color </td>");
-			echo ("<td>$year </td>");
-			echo ("<td><button type='submit'>Look at parts</button> </td>");
+			echo ("<td> $colorname </td>");
+			echo ("<td> <a href='blockinfo.php?itemID=$imgID&colorID=$imgColor&partname=$partname'>Look for sets</a></td>");
 			echo ("</tr>\n");
 		}
 	}
 	echo "<tr>\n";
 	mysqli_close($connection);
 	echo ("</table>");
+	
+	// Calculates which search results to show, based on current page
+	if ($numberOfPages > 1) {
+    echo "<div class='pages'>";
+    for ($page = 1; $page <= $numberOfPages; $page++) {
+	$offset = $page * $limit;
 
+		echo('<form action="search_result.php" method="GET">');
+		echo('<input type="hidden" id="offset" name="userinput" value="' . $search . '">');
+		echo('<input type="hidden" id="offset" name="offset" value="' . $offset . '">');
+		echo('<button style="padding:5px;" type="submit">' . $page . '</button>');
+		echo('</form>');
+	}
+	echo "</div>";
+		
+	}
 	?>
 
 </body>
