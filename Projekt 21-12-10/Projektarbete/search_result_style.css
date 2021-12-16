@@ -76,11 +76,17 @@ body, html{
 	 margin-right: auto;
  }
 table, th, td {
-    border: 1px solid black;
+	border-radius: 0.5vw;
     border-collapse: collapse;
 	text-align: center;
 }
-
+td {
+	border: 1px dotted black;
+	padding: 10px;
+}
+th {
+	padding: 10px;
+}
 h1{
 	text-align: center;
 	color: white;
@@ -148,6 +154,28 @@ input[type="search"]:focus {
   transition: all 1s;
   flex-grow: 0.1;
   flex-basis: auto;
+}
+
+.pages{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	font-size: 1vw;
+	margin-top: 1vw;
+}
+.pages button{
+	border: none;
+	color: black;
+	padding: 0.5vw;
+	background-color: white;
+	text-decoration: none;
+}
+.pages button:hover{
+	background-color:gray;
+	color: white;
+}
+.pages button:active{
+	color: black;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
