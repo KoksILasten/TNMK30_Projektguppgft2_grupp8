@@ -241,6 +241,11 @@ input[type="search"]:focus {
   background-color: #555;
 }
 
+.error{
+	color: white;
+	font-size: 1vw;
+}
+
 @media only screen and (max-width: 700px) {
   body {
     font-size: 1em;
