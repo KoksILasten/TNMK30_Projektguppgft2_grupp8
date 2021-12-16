@@ -5,6 +5,7 @@
 <div class="searchbar">
     <form action="search_result.php" method="GET">
         <input type="search" id="Searchinput" name="userinput" placeholder="Search for your parts here..." required>
+		<input type="hidden" id="offset" name="offset" value="0">
         <button class="search" id="searchtext" type="submit"></button>
     </form>
     <div class="help">
@@ -27,6 +28,15 @@
 
     </div>
     <?php
+		try {
+		$connection = mysqli_connect("mysql.itn.liu.se", "lego", "", "lego");
+		}catch (Exception $e) {
+		// Catch error messages if connection failed
+		$error = $e->getMessage();
+		echo "<div class='error'>";
+		echo $error;
+		echo "</div>";
+	}
     if (isset($_GET['error'])) {
         $showError = true;
     } else {
