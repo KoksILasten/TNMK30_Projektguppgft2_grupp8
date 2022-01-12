@@ -126,7 +126,7 @@ html {
     overflow: hidden;
     padding: 10%;
     border-bottom: yellow solid 5vw;
-    margin-left: -5vw;
+  
   }
 
   .headernavbar a {
@@ -139,8 +139,8 @@ html {
 
   .headernavbar img {
     transform: rotate(45deg);
-    width: 1vw;
-    height: 1vw;
+    width: 8vw;
+    height: 8vw;
   }
   .textheader {
     text-decoration: underline overline white;

@@ -12,15 +12,15 @@ body, html{
      z-index: 1;
 	
 	 
+	 
 }
 * {
      box-sizing: border-box;
      padding: 0%;
      margin: 0%;
-	 font-family: "Staatliches";
-	 font-weight: lighter;
  }
  .headernavbar {
+     font-family: "Staatliches";
      background-color: red;
      overflow: hidden;
      padding: 1vw;
@@ -74,7 +74,6 @@ body, html{
 	 text-align: center; 
 	 margin-left: auto;
 	 margin-right: auto;
-	 font-size: 1.4vw;
  }
 table, th, td {
 	border-radius: 0.5vw;
@@ -84,27 +83,18 @@ table, th, td {
 td {
 	border: 1px dotted black;
 	padding: 10px;
-	padding-left: 2vw;
-	padding-right: 2vw;
 }
 th {
 	padding: 10px;
-}
-table a{
-	color: black;
-	text-decoration: none;
-}
-table a:hover{
-	color: red;
-	text-decoration: underline;
 }
 h1{
 	text-align: center;
 	color: white;
      text-align: center;
      margin: 1vw;
+     /*scalar inte :/ kanske byt till vw om det ser snyggt ut*/
      text-decoration: none;
-     font-size: 1.4vw;
+     font-size: 100%;
 }
 
 
@@ -170,49 +160,30 @@ input[type="search"]:focus {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;
+	font-size: 1vw;
 	margin-top: 1vw;
-	margin-bottom: 1vw;
-}
-#firstpage {
-	background-color: red;
-}
-#prevpage {
-	background-color: yellow;
-}
-#nextpage {
-	background-color: lightgreen;
-}
-#lastpage {
-	background-color: lightblue;
 }
 .pages button{
 	border: none;
-	padding: .5vw;
+	color: black;
+	padding: 0.5vw;
+	background-color: white;
 	text-decoration: none;
-	font-size: 1.2vw;
 }
 .pages button:hover{
-	border: .5vw solid black;
-	color: darkgray;
+	background-color:gray;
+	color: white;
 }
-
 .pages button:active{
 	color: black;
 }
-#prevpage button:hover {
-	color: red;
-}
-
 
 /* Style the buttons that are used to open and close the accordion panel */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
 
    body { 
       font-size: 1em; 
-   }
-   h1{
-	font-size: 1.7em;   
    }
 	
 	 .headernavbar {
@@ -228,8 +199,10 @@ input[type="search"]:focus {
      color: white;
      text-align: center;
      margin: 6vw;
+     /*scalar inte :/ kanske byt till vw om det ser snyggt ut*/
      text-decoration: none;
-     font-size: 3.4em;
+     font-size: 8vw;
+	 
  }
  
  .headernavbar img {
@@ -238,25 +211,11 @@ input[type="search"]:focus {
 	 height: 8vw;
  }
  .searchbar {
+  z-index: 4;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
   margin-top: 10vw;
-}
- table {
-     border-spacing: 2vw;
-	 font-size: 1.8em;
- }
-table, th, td {
-	border-radius: 0.5vw;
-}
-td {
-	border: 1px dotted black;
-	padding: 10px;
-	padding-left: 2vw;
-	padding-right: 2vw;
-}
-th {
-	padding: 10px;
-}
-.pages button{
-	font-size: 4vw;
 }
 }

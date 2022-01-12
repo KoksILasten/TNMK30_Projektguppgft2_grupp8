@@ -79,6 +79,8 @@ html {
   right: 0;
   margin: auto;
   margin-top: 10vw;
+    
+  
 }
 
 form {
@@ -87,9 +89,11 @@ form {
   justify-content: center;
 }
 
+
+
 .searchbar .search {
   margin-left: -1vw;
-  width: 5vh;
+  width: 8vh;
   height: 8vh;
   background: red;
   border: none;
@@ -98,12 +102,14 @@ form {
   background-image: url("search.png");
   background-repeat: no-repeat;
   background-position: center;
+
 }
+
 
 input {
   border: none;
   transition: all 1s;
-  flex-grow: 0;
+  flex-grow: 0.013;
   flex-basis: auto;
 }
 
@@ -113,16 +119,17 @@ input:focus {
 }
 
 input[type="search"] {
+
   font-size: 1vw;
-  background-color: white;
-  background-image: url("LEGO_logo.png");
-  background-position: 1vw;
-  background-size: 2vw 2vw;
-  background-repeat: no-repeat;
-  padding: 1.2vw 2vw 1.2vw 4vw;
-  outline: none;
-  border-radius: 4px;
-  transition-delay: 1s;
+    background-color: white;
+    background-image: url("LEGO_logo.svg.png");
+    background-position: 2vw;
+    background-size: 2vw 2vw;
+    background-repeat: no-repeat;
+    padding: 1.2vw 2vw 1.2vw 6vw;
+    outline: none;
+    border-radius: 4px;
+	transition-delay: 1s;
 }
 
 input[type="search"]:focus {
@@ -147,13 +154,13 @@ input[type="search"]:focus {
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: red;
 }
 .panel {
   position: absolute;
   z-index: 7;
   width: 17vw;
-  padding: 0 2vh;
+  padding: 0 3vh;
   background-color: white;
   max-height: 0;
   overflow: hidden;
@@ -161,13 +168,21 @@ input[type="search"]:focus {
   border-radius: 0px 0px 3px 3px;
   margin-top: 3.5vw;
   font-size: 1.2em;
-  text-align: left;
+ 
 }
 .panel ul {
   padding-left: 1vw;
 }
 .panel p {
   font-weight: bold;
+}
+
+.accordion {
+	background-color: red;
+	font-family: "Staatliches"; 
+	color: white;
+	font-size: 1vw;
+	
 }
 
 .accordion:after {
@@ -246,6 +261,13 @@ input[type="search"]:focus {
 	font-size: 1vw;
 }
 
+.panel {
+	font-family: "Staatliches";
+	text-align: center;
+	background-color: red;
+	color: white;
+}
+
 @media only screen and (max-width: 700px) {
   body {
     font-size: 1em;
@@ -281,6 +303,7 @@ input[type="search"]:focus {
     right: 0;
     margin: auto;
     margin-top: 10vw;
+
   }
   input[type="search"] {
     font-size: 4vw;
@@ -306,19 +329,26 @@ input[type="search"]:focus {
     outline: none;
     transition: 0.4s;
     border-radius: 3px;
+	font-size: 3vw
   }
 
   .panel {
     position: relative;
     z-index: 7;
     width: 20vw;
-    padding: 0 1vh;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
     border-radius: 0px 0px 3px 3px;
-    margin-top: 5vw;
+    margin-top: 10vw;
     font-size: 3vw;
   }
+  
+  .panel {
+	font-family: "Staatliches";
+	text-align: center;
+	background-color: red;
+	color: white;
+}
 }

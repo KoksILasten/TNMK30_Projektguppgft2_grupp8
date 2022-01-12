@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Stardos+Stencil&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
 
 /* ------------------------------------ Menu bar ----------------------------- */
 body,
@@ -91,6 +93,7 @@ html {
 	height: 100%;
 	width: auto;
 	overflow: auto;
+	align-items: center;
 	
 	/* Center and scale the image nicely */
 	background-position: center;
@@ -102,14 +105,17 @@ html {
 
 .helpsection
 {
+	
 	margin-top: 1vw;
 	margin-bottom: 14vw;
+	margin-left: 30vw;
+	margin-right: 30vw;
 	text-align: center;
-	margin-left: 10%;
-	margin-right: 10%;
+ width: auto;
 	border-radius: 15px;
 	background-color: white;
 	padding: 1vw;
+	align-items: center;
 
 	z-index: 1;
 }
@@ -125,6 +131,7 @@ h2
 	margin-top: 1vw;
 	margin-bottom: 1vw;
 	font-size: 3vw;
+	text-decoration: underline red;
 }
 
 h4
@@ -133,11 +140,12 @@ h4
 	margin-top: 1vw;
 	margin-bottom: 1vw;
 	font-size: 2vw;
-	text-decoration: underline red;
+	
 }
 
 p 
 {
+	font-family: 'Luxurious Roman', cursive;
 	color: black;
 	margin-top: 1vw;
 	margin-bottom: 1vw;

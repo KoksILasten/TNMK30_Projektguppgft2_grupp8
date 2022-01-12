@@ -5,6 +5,7 @@
 <div class="searchbar">
     <form action="search_result.php" method="GET">
         <input type="search" id="Searchinput" name="userinput" placeholder="Search for your parts here..." required>
+		
 		<input type="hidden" id="offset" name="offset" value="0">
         <button class="search" id="searchtext" type="submit"></button>
     </form>
@@ -22,6 +23,10 @@
                     <p>
                         <li>Brick 2 x 2 ([item][size])</li>
                         <li>3004 ([itemID])</li>
+				</ul>
+				 <br></br>
+				<li>If you need more help, press the button in the top right corner!</li>
+				<br></br>
                 </ul>
 
             </ol>
