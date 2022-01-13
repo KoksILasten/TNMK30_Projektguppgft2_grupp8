@@ -36,7 +36,7 @@
 		header("Location: Index.php"); //sends you back to index in false
 		die();
 	}
-	$search = $_GET["userinput"];
+	$search = mysqli_real_escape_string($connection, $_GET["userinput"]);
 	
 	//Will remove white space at the beginning and end of user search.
 	$search = trim($search);
