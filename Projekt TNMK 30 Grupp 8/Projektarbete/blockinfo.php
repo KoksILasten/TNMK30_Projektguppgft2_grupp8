@@ -88,7 +88,7 @@
 			//For picture of the piece and show the amount of sets the piece is in
 			echo ("<div id='partpicture'><img src=\"$route\" alt=\"image not found\">");
 			echo ("<h1> This part is found in '$numrows' sets </h1>");
-			echo ("<h1> Sets will be shown in alhabetic </h1>");
+			echo ("<h1> Sets will be shown in alhabetic order</h1>");
 			echo ("</div>");
 			
 		
